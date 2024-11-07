@@ -1,4 +1,17 @@
+const {Sequelize,sequelize,DataTypes,Model} = require('../db/connection');
 
-let Like;
+// TODO - define the Band model
 
-module.exports = Like;
+class Like extends Model {};
+
+Like.init({
+    reactionType : DataTypes.STRING ,
+    createdAt:DataTypes.STRING,
+},{
+        sequelize : sequelize,
+        modelName: "Like"
+})
+
+module.exports = {
+    Like
+};

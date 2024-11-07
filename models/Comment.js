@@ -1,5 +1,17 @@
+const {Sequelize,sequelize,DataTypes,Model} = require('../db/connection');
 
-let Comment;
+// TODO - define the Band model
 
+class Comment extends Model {};
 
-module.exports = Comment;
+Comment.init({
+    body: DataTypes.STRING,
+    createdAt:DataTypes.STRING,
+},{
+        sequelize : sequelize,
+        modelName: "Comment"
+})
+
+module.exports = {
+    Comment
+};
